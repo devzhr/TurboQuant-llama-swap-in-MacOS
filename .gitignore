@@ -1,0 +1,17 @@
+# Binaries
+llama-cpp-turboquant/build/
+llama-cpp-turboquant/bin/
+llama-cpp-turboquant/.cache/
+
+# Models (Large files)
+*.gguf
+*.ini
+.cache/
+.huggingface/
+
+# Environment / Configs
+.env
+llama_cpp_cache/
+
+# OS files
+.DS_Store
