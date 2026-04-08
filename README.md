@@ -16,8 +16,8 @@ brew install cmake go
 git clone https://github.com/devzhr/TurboQuant-llama-swap-MacOS.git
 cd TurboQuant-llama-swap-MacOS
 
-git clone --depth 1 -b feature/turboquant-kv-cache \
-  https://github.com/TheTom/llama-cpp-turboquant.git
+git clone --depth 1 -b feature/gemma-4 \
+  https://github.com/devzhr/atomic-llama-cpp-turboquant.git
 
 cd llama-cpp-turboquant
 cmake -B build -DGGML_METAL=ON -DGGML_METAL_EMBED_LIBRARY=ON -DLLAMA_BUILD_SERVER=ON -DLLAMA_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release
@@ -32,8 +32,8 @@ brew install llama-swap
 ```
 
 ### 4. Download Model
-Download a GGUF model (e.g., Qwen3.5-9B) and place it in the root folder.
-*Recommended for 16GB RAM*: `Qwen2.5-7B-Instruct-Q8_0.gguf` or `Qwen3.5-9B-Instruct-Q4_K_M.gguf`.
+Download a GGUF model (e.g., gemma-4-e4b-it) and place it in the root folder.
+*Recommended for 16GB RAM*: `gemma-4-e4b-it-Q4_K_M.gguf`.
 
 ### 5. Configure and Launch
 Adjust the model path in `config.yaml`, then:

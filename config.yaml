@@ -1,10 +1,10 @@
 models:
-  qwen3.5-9b:
+  localLLM:
     ttl: 600
     cmd: |
-      ./llama-cpp-turboquant/build/bin/llama-server \
-      -m ./Huihui-Qwen3.5-9B-abliterated.Q8_0.gguf \
+      ./atomic-llama-cpp-turboquant/build/bin/llama-server \
+      -m ./gemma-4-e4b-it-Q4_K_M.gguf \
       --port ${PORT} --host 0.0.0.0 \
       -ngl 99 -fa on \
-      -ctk turbo3 -ctv turbo3 \
-      -c 4096 -t 8 --parallel 1
+      -ctk q8_0 -ctv q8_0 \
+      -c 131072 -t 8 --parallel 4
