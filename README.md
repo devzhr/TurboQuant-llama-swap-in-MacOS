@@ -13,13 +13,13 @@ brew install cmake go
 
 ### 2. Clone and Build llama-server (Metal Support)
 ```bash
-git clone https://github.com/devzhr/TurboQuant-llama-swap-MacOS.git
-cd TurboQuant-llama-swap-MacOS
+git clone https://github.com/devzhr/TurboQuant-llama-swap-in-MacOS.git
+cd TurboQuant-llama-swap-in-MacOS
 
 git clone --depth 1 -b feature/gemma-4 \
   https://github.com/devzhr/atomic-llama-cpp-turboquant.git
 
-cd llama-cpp-turboquant
+cd atomic-llama-cpp-turboquant
 cmake -B build -DGGML_METAL=ON -DGGML_METAL_EMBED_LIBRARY=ON -DLLAMA_BUILD_SERVER=ON -DLLAMA_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release -j$(sysctl -n hw.ncpu)
 cd ..
